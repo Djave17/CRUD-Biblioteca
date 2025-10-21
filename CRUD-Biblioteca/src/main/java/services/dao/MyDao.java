@@ -2,9 +2,9 @@ package services.dao;
 
 
 import jakarta.persistence.TypedQuery;
-import uam.edu.ni.crudbiblioteca.services.interfaces.ICRUD;
+import services.interfaces.ICRUD;
 import jakarta.persistence.EntityManager;
-import uam.edu.ni.crudbiblioteca.util.JPAConexion;
+import util.JPAConexion;
 
 import java.util.List;
 

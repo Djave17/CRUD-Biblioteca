@@ -1,8 +1,9 @@
 
 
-import uam.edu.ni.crudbiblioteca.entity.Autor;
-import uam.edu.ni.crudbiblioteca.services.dao.MyDao;
-import uam.edu.ni.crudbiblioteca.services.interfaces.ICRUD;
+import entity.Autor;
+import entity.Libro;
+import services.dao.MyDao;
+import services.interfaces.ICRUD;
 
 import java.util.List;
 
@@ -57,4 +58,43 @@ public class Main {
         a = crud.findById(2, Autor.class);
         crud.delete(a);
     }
+
+
+    public static void crearLibro(){
+        Libro a = new Libro();
+        a = crud.findById(1, Libro.class);
+        a.setTitulo("El hobbit");
+        a.setAnioPublicacion("1937");
+        crud.update(a);
+
+    }
+
+    public static void listarLibros(){
+        Libro a = new Libro();
+        List<Libro> libros = crud.getAll("libros.All", Libro.class);
+        libros.forEach(libro -> {          ;
+            System.out.println("ID: " + libro.getId());
+            System.out.println("Titulo: " + libro.getTitulo());
+            System.out.println("Anio Publicacion: " + libro.getAnioPublicacion());
+            System.out.println("-----------------------");
+        });
+    }
+
+    public static void eliminarLibro(){
+        Libro a = new Libro();
+        a = crud.findById(1, Libro.class);
+        crud.delete(a);
+    }
+
+    public static void editarLibro(){
+        Libro a = new Libro();
+        a = crud.findById(1, Libro.class);
+        a.setTitulo("El hobbit 2");
+        crud.update(a);
+    }
+
+    public static void insertarCategoria(){
+        
+    }
+
 }
