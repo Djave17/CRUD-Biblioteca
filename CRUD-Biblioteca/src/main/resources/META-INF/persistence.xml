@@ -4,11 +4,14 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
              version="3.2">
     <persistence-unit name="uam">
+        <class>entity.Autor</class>
+        <class>entity.Libro</class>
+        <class>entity.Categoria</class>
 
         <properties>
 
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5434/biblioteca"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5433/cisedDB"/>
             <property name="jakarta.persistence.jdbc.user" value="David"/>
             <property name="jakarta.persistence.jdbc.password" value="Dsanchez2303"/>
             <property name="hibernate.show_sql" value="true"/>

@@ -1,4 +1,5 @@
-package uam.edu.ni.crudbiblioteca.services.interfaces;
+package services.interfaces;
+
 
 import java.util.List;
 

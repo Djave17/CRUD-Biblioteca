@@ -1,4 +1,4 @@
-package uam.edu.ni.crudbiblioteca.util;
+package util;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

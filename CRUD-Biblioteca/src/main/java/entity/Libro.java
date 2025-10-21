@@ -1,4 +1,4 @@
-package uam.edu.ni.crudbiblioteca.entity;
+package entity;
 
 import jakarta.persistence.*;
 import jdk.jfr.Name;

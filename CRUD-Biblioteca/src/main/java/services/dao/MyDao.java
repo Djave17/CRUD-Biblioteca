@@ -1,4 +1,4 @@
-package uam.edu.ni.crudbiblioteca.services.dao;
+package services.dao;
 
 
 import jakarta.persistence.TypedQuery;
