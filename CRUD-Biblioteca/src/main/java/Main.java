@@ -36,26 +36,35 @@ public class Main {
     }
 
     public static void listarAutores(){
-        Autor a = new Autor();
-        List<Autor> autores = crud.getAll("autores.All", Autor.class);
-        autores.forEach(autor -> {          ;
-            System.out.println("ID: " + autor.getId());
-            System.out.println("Nombre: " + autor.getNombre());
-            System.out.println("Nacionalidad: " + autor.getNacionalidad());
-            System.out.println("-----------------------");
-        });
+    List<Autor> autores = crud.getAll("autores.All", Autor.class);
+    if (autores == null || autores.isEmpty()) {
+        System.out.println("No se encontraron autores.");
+        return;
     }
+    autores.forEach(autor -> {
+        System.out.println("ID: " + autor.getId());
+        System.out.println("Nombre: " + autor.getNombre());
+        System.out.println("Nacionalidad: " + autor.getNacionalidad());
+        System.out.println("-----------------------");
+    });
+}
 
     public static void editarAutor(){
-        Autor a = new Autor();
-        a = crud.findById(1, Autor.class);
+        Autor a = crud.findById(1, Autor.class);
+        if (a == null) {
+            System.out.println("Autor con ID 1 no encontrado.");
+            return;
+        }
         a.setNacionalidad("Colombiano");
         crud.update(a);
     }
 
     public static void eliminarAutor(){
-        Autor a = new Autor();
-        a = crud.findById(2, Autor.class);
+        Autor a = crud.findById(2, Autor.class);
+        if (a == null) {
+            System.out.println("Autor con ID 2 no encontrado.");
+            return;
+        }
         crud.delete(a);
     }
 

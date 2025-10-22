@@ -23,7 +23,7 @@ public class Autor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nombre_categoria", length = 100, nullable = false)
+    @Column(name = "nombre", length = 100, nullable = false)
     private String nombre;
 
     @Column(name = "nacionalidad", length = 100, nullable = false)
