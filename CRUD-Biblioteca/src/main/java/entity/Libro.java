@@ -24,7 +24,7 @@ public class Libro {
     @Column(name = "titulo", length = 200, nullable = false)
     private String titulo;
 
-    private String anioPublicacion;
+    private int anioPublicacion;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "categoria_id")
